@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Hasami Shogi</string>
+
+    <string name="username">Username</string>
+    <string name="bio">Enter A Little About The Player</string>
+    <string name="save">Save</string>
+
+    <string name="header_won">W</string>
+    <string name="header_loss">L</string>
+    <string name="header_points">P</string>
+    <string name="register_player">Add Player</string>
+    <string name="add_game">Start New Game</string>
+    <string name="view_leaderboard">View Leaderboard</string>
+
+    <string name="nine">Hasami Shogi (9 Pieces)</string>
+    <string name="eighteen">Dai Hasami Shogi (18 Pieces)</string>
+    <string name="pieces">Number Of Pieces:</string>
+    <string name="das_win">Dai Hasami Shogi 5 Piece Win Rule:</string>
+    <string name="amount_required">Amount Required To Win:</string>
+
+    <string name="select_player1">Select Player 1:</string>
+    <string name="select_player2">Select Player 2:</string>
+    <string name="player1">Player 1:</string>
+    <string name="player2">Player 2:</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="v">v</string>
+</resources>

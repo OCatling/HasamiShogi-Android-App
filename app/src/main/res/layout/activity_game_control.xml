@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.olivercatling.hasamishogi.Activities.ActivityGameControl">
+
+    <LinearLayout
+        android:id="@+id/container_vertical_mainGameControls"
+        android:layout_width="0dp"
+        android:layout_height="259dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/layout_leaderboard_headings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="8">
+
+                <TextView
+                    android:id="@+id/heading_username"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="start"
+                    android:layout_weight="5"
+                    android:text="@string/username" />
+
+                <TextView
+                    android:id="@+id/heading_games_won"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/header_won" />
+
+                <TextView
+                    android:id="@+id/heading_games_lost"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/header_loss" />
+
+                <TextView
+                    android:id="@+id/heading_points"
+                    android:layout_width="0dip"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/header_points" />
+            </TableRow>
+
+        </TableLayout>
+
+        <ListView
+            android:id="@+id/list_leaderboard"
+            android:layout_width="match_parent"
+            android:layout_height="172dp" />
+
+        <LinearLayout
+            android:id="@+id/layout_player_button_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="android:attr/buttonBarStyle">
+
+            <Button
+                android:id="@+id/button_addPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="registerPlayerClick"
+                android:text="@string/register_player"
+                style="android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/button_view_leaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="viewLeaderboard"
+                android:text="@string/view_leaderboard"
+                style="android:attr/buttonBarButtonStyle"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ListView
+            android:id="@+id/listview_games"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button_startNewGame"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:onClick="startNewGame"
+            android:text="@string/add_game" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
